@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="U TF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    
+    <link rel="style1.css">
+    <title>Resume Builder</title>
+ </head>
+ <body>
+
+        <h1 class="text-center" >Let's Build Your Resume..</h1>
+        <p class="text-secondary text-center">Project by Arun Kumar Arali</p>
+
+     </div><br><br>
+
+      <div class="container">
+        <div class="row">
+
+          
+
+
+              <div class="col-md-6 ml-3" style="  border-radius:30px;">
+                  <h2>Personal Information</h2>
+
+                
+                    <lable>Enter Full Name</lable><br>
+                    <input type="text" id="name"><br>
+
+                    <lable>Phone</lable><br>
+                    <input type="number" id="number"><br>
+
+                    <lable>Email</lable><br>
+                    <input type="email" id="email"><br>
+
+                    <lable>Address</lable><br>
+                    <textarea type="text" id="address" rows="6" cols="24" required></textarea><br><br>
+
+
+                    <p class="text-secondary" style="font-size: x-large;">Education</p>
+
+                  <lable style="font-size: larger;">Master Degree</lable><br>
+                  <input type="text" id="master" placeholder="College_Name"><br>
+                  <lable>Year</lable><br>
+                  <input  id="master_date" placeholder="YYYY"><br>
+                  <lable>Percentage</lable><br>
+                  <input type="text" id="master_p" placeholder="Percentage">
+                  <br><br><br>
+
+                  <lable style="font-size: larger;">Degree</lable><br>
+                  <input type="text" id="degree" placeholder="College_Name"><br>
+                  <lable>Year</lable><br>
+                  <input  id="degree" placeholder="YYYY"><br>
+                  <lable>Percentage</lable><br>
+                  <input type="text" id="degree_p" placeholder="Percentage">
+                  <br><br><br>
+
+                  <lable style="font-size: larger;">PUC/12th</lable><br>
+                  <input type="text" id="puc" placeholder="College_Name"><br>
+                  <lable>Year</lable><br>
+                  <input  id="puc_date" placeholder="YYYY"><br>
+                  <lable>Percentage</lable><br>
+                  <input type="text" id="puc_p" placeholder="Percentage">
+                  <br><br><br>
+
+                  <lable style="font-size: larger;">SSLC/10th</lable><br>
+                  <input type="text" id="sslc" placeholder="College_Name"><br>
+                  <lable>Year</lable><br>
+                  <input  id="sslc_date" placeholder="YYYY"><br>
+                  <lable>Percentage</lable><br>
+                  <input type="text" id="sslc_p" placeholder="Percentage">
+                  <br><br><br>
+
+
+
+                    
+
+
+               </div>
+
+                       
+
+
+               <div class="col-md-6" style="border-radius: 30px;">
+                <h2>Professional Information</h2>
+
+              
+                  <lable>Job Title</lable><br>
+                  <input type="text" id="job_title"><br><br>
+
+                  <lable>Bio</lable><br>
+                  <textarea type="text" id="bio" rows="6" cols="24" required></textarea><br><br>
+
+
+
+                  <p class="text-secondary" style="font-size: x-large;">Work Experience</p>
+
+                  <lable style="font-size: larger;">Details</lable><br>
+
+                  <div class="input_container" id="input_fields_container">
+                  <input type="text" id="company" placeholder="Company Name"><br>
+                  <lable>Title</lable><br>
+                  <input  id="job_title" placeholder="Job Title"><br>
+                  <lable>Duration(In Years)</lable><br>
+                  <input type="text" id="duration" placeholder="X Years"></div>
+                  <br>
+
+                  <div class="container mx-auto" id="weAddButton">
+                    <button id="addButton" onclick="addNewField()" class="btn btn-primary btn-sm">Add</button>
+                  </div>
+                  
+                  <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  <p class="text-secondary">Impotrant Links</p>
+
+                  <lable>Linkedin</lable><br>
+                  <input type="text" id="linkedin"><br>
+
+                  <lable>Github</lable><br>
+                  <input type="text" id="github"><br>
+
+                  <lable>Instagram</lable><br>
+                  <input type="text" id="insta"><br>
+
+                 
+
+
+                 
+             </div>
+
+
+
+
+               
+
+                 
+               
+             
+           
+
+
+        </div>
+      </div><br>
+
+
+      <div class="container text-center">
+      <button type="submit" class="btn btn-primary">Generate Resume</button>
+      </div><br><br><br>
+
+      
+      <script src="script2.js"></script>
+
+
+
+    </body>
+</html>
