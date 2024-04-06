@@ -18,96 +18,89 @@
         }
 
         html{
+            background-image: linear-gradient(135deg, rgb(27, 255, 255,0.5),rgb(17,113,186,0.3),pink,rgb(128, 0, 128,0.2));    
             background-color: rgb(17,113,186,0.3);
         }
 
         body{
-            max-width: 1500px;
-            
-    margin: 50px auto;
-    background-color: rgb(200,200,200,);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-}
-        
+            max-width: 1400px;
+            margin: 50px auto;
+            background-color: rgb(200,200,200,);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #000000;
+        }     
     </style>
 
+    <script>
+        function addNewField1() {
+            // Get the education fields container
+            var educationContainer = document.getElementById('education_fields_container');
 
-<script>function addNewField1() {
-    // Get the education fields container
-    var educationContainer = document.getElementById('education_fields_container');
+            // Create a new education input field container
+            var newEducationField = document.createElement('div');
+            newEducationField.classList.add('input-container');
 
-    // Create a new education input field container
-    var newEducationField = document.createElement('div');
-    newEducationField.classList.add('input-container');
+            // Add HTML content for the new education input fields
+            newEducationField.innerHTML = `
+                <br><br><div>
+                    <label for="course">Course</label><br>
+                    <input type="text" class="form-control" placeholder="SSLC/PUC/Degree/Master Degree">
+                </div>
+                <div>
+                    <label for="course_college">College/University</label><br>
+                    <input type="text" class="form-control" placeholder="Enter College/University Name">
+                </div>
+                <div>
+                    <label for="course_year">Year</label><br>
+                    <input type="text" class="form-control" placeholder="From">
+                    <input type="text" class="form-control" placeholder="To">
+                </div>
+                <div>
+                    <label for="course_percentage">Percentage</label><br>
+                    <input type="text" class="form-control" placeholder="Enter Percentage">
+                </div>
+                <br><br>
+            `;
 
-    // Add HTML content for the new education input fields
-    newEducationField.innerHTML = `
-        <br><br><div>
-            <label for="course">Course</label><br>
-            <input type="text" class="form-control" placeholder="SSLC/PUC/Degree/Master Degree">
-        </div>
-        <div>
-            <label for="course_college">College/University</label><br>
-            <input type="text" class="form-control" placeholder="Enter College/University Name">
-        </div>
-        <div>
-            <label for="course_year">Year</label><br>
-            <input type="text" class="form-control" placeholder="From">
-            <input type="text" class="form-control" placeholder="To">
-        </div>
-        <div>
-            <label for="course_percentage">Percentage</label><br>
-            <input type="text" class="form-control" placeholder="Enter Percentage">
-        </div>
-        <br><br>
-    `;
+            // Append the new education input fields to the education fields container
+            educationContainer.appendChild(newEducationField);
+        }
 
-    // Append the new education input fields to the education fields container
-    educationContainer.appendChild(newEducationField);
-}
+        function addNewField2() {
+            // Get the experience fields container
+            var experienceContainer = document.getElementById('experience_fields_container');
 
+            // Create a new experience input field container
+            var newExperienceField = document.createElement('div');
+            newExperienceField.classList.add('input-container');
 
-function addNewField2() {
-        // Get the experience fields container
-        var experienceContainer = document.getElementById('experience_fields_container');
+            // Add HTML content for the new experience input fields
+            newExperienceField.innerHTML = `
+                <br><br><div>
+                    <label for="experience_company">Company</label><br>
+                    <input type="text" class="form-control" placeholder="Enter Company Name">
+                </div>
+                <div>
+                    <label for="experience_job_title">Job Title</label><br>
+                    <input type="text" class="form-control" placeholder="Enter Job Title">
+                </div>
+                <div>
+                    <label for="experience_duration">Duration</label><br>
+                    <input type="text" class="form-control" placeholder="From">
+                    <input type="text" class="form-control" placeholder="To">
+                </div>
+                <div>
+                    <label for="experience_overview">Overview</label><br>
+                    <textarea class="form-control" rows="6" placeholder="Enter Overview"></textarea>
+                </div>
+                <br><br>
+            `;
 
-        // Create a new experience input field container
-        var newExperienceField = document.createElement('div');
-        newExperienceField.classList.add('input-container');
-
-        // Add HTML content for the new experience input fields
-        newExperienceField.innerHTML = `
-            <br><br><div>
-                <label for="experience_company">Company</label><br>
-                <input type="text" class="form-control" placeholder="Enter Company Name">
-            </div>
-            <div>
-                <label for="experience_job_title">Job Title</label><br>
-                <input type="text" class="form-control" placeholder="Enter Job Title">
-            </div>
-            <div>
-                <label for="experience_duration">Duration</label><br>
-                <input type="text" class="form-control" placeholder="From">
-                <input type="text" class="form-control" placeholder="To">
-            </div>
-            <div>
-                <label for="experience_overview">Overview</label><br>
-                <textarea class="form-control" rows="6" placeholder="Enter Overview"></textarea>
-            </div>
-            <br><br>
-        `;
-
-        // Append the new experience input fields to the experience fields container
-        experienceContainer.appendChild(newExperienceField);
-    }
-
-
-
-</script>
-
-
+            // Append the new experience input fields to the experience fields container
+            experienceContainer.appendChild(newExperienceField);
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -131,12 +124,10 @@ function addNewField2() {
                     <label for="email">Email</label><br>
                     <input type="email" id="email" class="form-control" placeholder="Enter Email Address">
                 </div>
-
                 <div class="file-input-wrapper">
-                   <label for="photo">Your Photo</label>
-                   <input type="file" accept="image/*" capture="camera" id="photoInput">
+                    <label for="photo">Your Photo</label>
+                    <input type="file" accept="image/*" capture="camera" id="photoInput">
                 </div>
-
                 <div class="input-container">
                     <label for="address">Address</label><br>
                     <textarea id="address" class="form-control" rows="6" placeholder="Enter Address"></textarea>
@@ -148,20 +139,19 @@ function addNewField2() {
                         <input type="text" id="course" class="form-control" placeholder="SSLC/PUC/Degree/Master Degree">
                     </div>
                     <div>
-                        <label for="course_college">College/University</label><br>
+                        <label for="education_college">College/University</label><br>
                         <input type="text" id="course_college" class="form-control" placeholder="Enter College/University Name">
                     </div>
                     <div>
-                        <label for="course_year">Year</label><br>
+                        <label for="education_year">Year</label><br>
                         <input type="text" id="course_year_from" class="form-control" placeholder="From">
                         <input type="text" id="course_year_to" class="form-control" placeholder="To">
                     </div>
                     <div>
-                        <label for="course_percentage">Percentage</label><br>
+                        <label for="education_percentage">Percentage</label><br>
                         <input type="text" id="course_percentage" class="form-control" placeholder="Enter Percentage">
                     </div>
                 </div>
-
                 <div class="container text-center mt-2" id="eduAddButton">
                     <button id="addButton1" onclick="addNewField1()" class="btn btn-primary btn-sm">Add</button>
                 </div>
@@ -177,7 +167,6 @@ function addNewField2() {
                     <label for="bio">Bio</label><br>
                     <textarea id="bio" class="form-control" rows="6" placeholder="Enter Bio"></textarea>
                 </div>
-
                 <h2>Work Experience</h2>
                 <div class="input-container" id="experience_fields_container">
                     <div>
@@ -198,11 +187,9 @@ function addNewField2() {
                         <textarea id="bio" class="form-control" rows="6" placeholder="Enter Here"></textarea>
                     </div>
                 </div>
-
                 <div class="container text-center mt-2" id="weAddButton">
                     <button id="addButton2" onclick="addNewField2()" class="btn btn-primary btn-sm">Add</button>
                 </div>
-
                 <h2>Links</h2>
                 <div class="input-container">
                     <label for="linkedin">LinkedIn</label><br>
@@ -219,14 +206,11 @@ function addNewField2() {
             </div>
         </div>
 
-        <br><br>
-
         <div class="text-center mt-4">
-            <button id="generate_resume_btn" class="btn btn-primary">Generate Resume</button>
+            <button id="generate_resume_btn" class="btn btn-primary" onclick="printResume()">Generate Resume</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="wscript7.js"></script>
 </body>
 </html>
-
