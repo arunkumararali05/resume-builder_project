@@ -1,4 +1,4 @@
- .jumbotron {
+.jumbotron {
         background-color: rgb(17, 113, 186, 0.7);
         border-radius: 20px;
         width: 100%;
@@ -27,9 +27,22 @@
         border-radius: 10px;
         box-shadow: 0 0 10px #000000;
       }
-      img {
+      #img1{
         border-radius: 8px;
         max-width: 600px;
         border: solid;
         box-shadow: #000000;
       }
+
+      hr{
+        height:5px;color: rgb(36, 60, 84);
+      }
+      
+       #img2{
+        size: 300px;
+        border-radius: 10px;
+        margin-left: 140px;
+        border: solid;
+        box-shadow: #000000;
+      }
+
