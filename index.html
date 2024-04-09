@@ -1,216 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume Builder</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-        .jumbotron {
-            background-color: rgb(17,113,186,0.7);
-            border-radius: 20px;
-            width: 100%;
-            margin: 20px auto;
-        }
-
-        .input-container {
-            margin-bottom: 20px;
-        }
-
-        html{
-            background-image: linear-gradient(135deg, rgb(27, 255, 255,0.5),rgb(17,113,186,0.3),pink,rgb(128, 0, 128,0.2));    
-            background-color: rgb(17,113,186,0.3);
-        }
-
-        body{
-            max-width: 1400px;
-            margin: 50px auto;
-            background-color: rgb(200,200,200,);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #000000;
-        }     
-    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"/>
+      <link rel="stylesheet" href="index-style.css">
+    
 
     <script>
-        function addNewField1() {
-            // Get the education fields container
-            var educationContainer = document.getElementById('education_fields_container');
+      function addNewField1() {
+        // Get the education fields container
+        var educationContainer = document.getElementById(
+          "education_fields_container"
+        );
 
-            // Create a new education input field container
-            var newEducationField = document.createElement('div');
-            newEducationField.classList.add('input-container');
+        // Create a new education input field container
+        var newEducationField = document.createElement("div");
+        newEducationField.classList.add("input-container");
 
-            // Add HTML content for the new education input fields
-            newEducationField.innerHTML = `
+        // Add HTML content for the new education input fields
+        newEducationField.innerHTML = `
                 <br><br><div>
                     <label for="course">Course</label><br>
-                    <input type="text" class="form-control" placeholder="SSLC/PUC/Degree/Master Degree">
+                    <input type="text" id="Course" class="form-control" placeholder="SSLC/PUC/Degree/Master Degree">
                 </div>
                 <div>
                     <label for="course_college">College/University</label><br>
-                    <input type="text" class="form-control" placeholder="Enter College/University Name">
+                    <input type="text" id="College" class="form-control" placeholder="Enter College/University Name">
                 </div>
                 <div>
                     <label for="course_year">Year</label><br>
-                    <input type="text" class="form-control" placeholder="From">
-                    <input type="text" class="form-control" placeholder="To">
+                    <input type="text" id="cfrom" class="form-control" placeholder="From">
+                    <input type="text" id="cto" class="form-control" placeholder="To">
                 </div>
                 <div>
                     <label for="course_percentage">Percentage</label><br>
-                    <input type="text" class="form-control" placeholder="Enter Percentage">
+                    <input type="text" id="percentage" class="form-control" placeholder="Enter Percentage">
                 </div>
                 <br><br>
             `;
 
-            // Append the new education input fields to the education fields container
-            educationContainer.appendChild(newEducationField);
-        }
+        // Append the new education input fields to the education fields container
+        educationContainer.appendChild(newEducationField);
+      }
 
-        function addNewField2() {
-            // Get the experience fields container
-            var experienceContainer = document.getElementById('experience_fields_container');
+      function addNewField2() {
+        // Get the experience fields container
+        var experienceContainer = document.getElementById(
+          "experience_fields_container"
+        );
 
-            // Create a new experience input field container
-            var newExperienceField = document.createElement('div');
-            newExperienceField.classList.add('input-container');
+        // Create a new experience input field container
+        var newExperienceField = document.createElement("div");
+        newExperienceField.classList.add("input-container");
 
-            // Add HTML content for the new experience input fields
-            newExperienceField.innerHTML = `
+        // Add HTML content for the new experience input fields
+        newExperienceField.innerHTML = `
                 <br><br><div>
                     <label for="experience_company">Company</label><br>
-                    <input type="text" class="form-control" placeholder="Enter Company Name">
+                    <input type="text" id="company" class="form-control" placeholder="Enter Company Name">
                 </div>
                 <div>
                     <label for="experience_job_title">Job Title</label><br>
-                    <input type="text" class="form-control" placeholder="Enter Job Title">
+                    <input type="text" id="jobtitle" class="form-control" placeholder="Enter Job Title">
                 </div>
                 <div>
                     <label for="experience_duration">Duration</label><br>
-                    <input type="text" class="form-control" placeholder="From">
-                    <input type="text" class="form-control" placeholder="To">
+                    <input type="text" id="jfrom" class="form-control" placeholder="From">
+                    <input type="text" id="jto" class="form-control" placeholder="To">
                 </div>
                 <div>
                     <label for="experience_overview">Overview</label><br>
-                    <textarea class="form-control" rows="6" placeholder="Enter Overview"></textarea>
+                    <textarea id="overview" class="form-control" rows="6" placeholder="Enter Overview"></textarea>
                 </div>
                 <br><br>
             `;
 
-            // Append the new experience input fields to the experience fields container
-            experienceContainer.appendChild(newExperienceField);
-        }
+        // Append the new experience input fields to the experience fields container
+        experienceContainer.appendChild(newExperienceField);
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="jumbotron text-center" style="height: 200px;padding: 60px;margin-top: 30px;">
-            <h1>Let's Build Your Resume</h1>
-            <p>Project by Arun Kumar Arali</p>
+      <div
+        class="jumbotron text-center"
+        style="height: 200px; padding: 60px; margin-top: 30px"
+      >
+        <h1>Let's Build Your Resume</h1>
+        <p>Project by Arun Kumar Arali</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Personal Information</h2>
+          <div class="input-container">
+            <label for="name">Full Name</label><br />
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              placeholder="Enter Full Name" required>
+          </div>
+          <div class="input-container">
+            <label for="phone">Phone</label><br />
+            <input
+              type="number"
+              id="phone"
+              class="form-control"
+              placeholder="Enter Phone Number"
+            />
+          </div>
+          <div class="input-container">
+            <label for="email">Email</label><br />
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="Enter Email Address"
+            />
+          </div>
+          <div class="file-input-wrapper">
+            <label for="photo">Your Photo</label>
+            <input type="file" accept="image/*" capture="camera" id="url" />
+          </div>
+          <div class="input-container">
+            <label for="address">Address</label><br />
+            <textarea
+              id="address"
+              class="form-control"
+              rows="6"
+              placeholder="Enter Address"
+            ></textarea>
+          </div>
+          <h2>Education</h2>
+          <div class="input-container" id="education_fields_container">
+            <img id="img1" class="img-fluid" src="education.png" />
+          </div>
+          <div class="container text-center mt-2" id="eduAddButton">
+            <button
+              id="addButton1"
+              onclick="addNewField1()"
+              class="btn btn-primary btn-sm"
+            >
+              Add
+            </button>
+          </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Personal Information</h2>
-                <div class="input-container">
-                    <label for="name">Full Name</label><br>
-                    <input type="text" id="name" class="form-control" placeholder="Enter Full Name">
-                </div>
-                <div class="input-container">
-                    <label for="number">Phone</label><br>
-                    <input type="number" id="number" class="form-control" placeholder="Enter Phone Number">
-                </div>
-                <div class="input-container">
-                    <label for="email">Email</label><br>
-                    <input type="email" id="email" class="form-control" placeholder="Enter Email Address">
-                </div>
-                <div class="file-input-wrapper">
-                    <label for="photo">Your Photo</label>
-                    <input type="file" accept="image/*" capture="camera" id="photoInput">
-                </div>
-                <div class="input-container">
-                    <label for="address">Address</label><br>
-                    <textarea id="address" class="form-control" rows="6" placeholder="Enter Address"></textarea>
-                </div>
-                <h2>Education</h2>
-                <div class="input-container" id="education_fields_container">
-                    <div>
-                        <label for="course">Course</label><br>
-                        <input type="text" id="course" class="form-control" placeholder="SSLC/PUC/Degree/Master Degree">
-                    </div>
-                    <div>
-                        <label for="education_college">College/University</label><br>
-                        <input type="text" id="course_college" class="form-control" placeholder="Enter College/University Name">
-                    </div>
-                    <div>
-                        <label for="education_year">Year</label><br>
-                        <input type="text" id="course_year_from" class="form-control" placeholder="From">
-                        <input type="text" id="course_year_to" class="form-control" placeholder="To">
-                    </div>
-                    <div>
-                        <label for="education_percentage">Percentage</label><br>
-                        <input type="text" id="course_percentage" class="form-control" placeholder="Enter Percentage">
-                    </div>
-                </div>
-                <div class="container text-center mt-2" id="eduAddButton">
-                    <button id="addButton1" onclick="addNewField1()" class="btn btn-primary btn-sm">Add</button>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <h2>Professional Information</h2>
-                <div class="input-container">
-                    <label for="job_title">Job Title</label><br>
-                    <input type="text" id="job_title" class="form-control" placeholder="Enter Job Title">
-                </div>
-                <div class="input-container">
-                    <label for="bio">Bio</label><br>
-                    <textarea id="bio" class="form-control" rows="6" placeholder="Enter Bio"></textarea>
-                </div>
-                <h2>Work Experience</h2>
-                <div class="input-container" id="experience_fields_container">
-                    <div>
-                        <label for="experience_company">Company</label><br>
-                        <input type="text" id="experience_company" class="form-control" placeholder="Enter Company Name">
-                    </div>
-                    <div>
-                        <label for="experience_job_title">Job Title</label><br>
-                        <input type="text" id="experience_job_title" class="form-control" placeholder="Enter Job Title">
-                    </div>
-                    <div>
-                        <label for="experience_duration">Duration(Year)</label><br>
-                        <input type="text" id="experience_from" class="form-control" placeholder="From">
-                        <input type="text" id="experience_to" class="form-control" placeholder="To">
-                    </div>
-                    <div>
-                        <label for="overview">Overview</label><br>
-                        <textarea id="bio" class="form-control" rows="6" placeholder="Enter Here"></textarea>
-                    </div>
-                </div>
-                <div class="container text-center mt-2" id="weAddButton">
-                    <button id="addButton2" onclick="addNewField2()" class="btn btn-primary btn-sm">Add</button>
-                </div>
-                <h2>Links</h2>
-                <div class="input-container">
-                    <label for="linkedin">LinkedIn</label><br>
-                    <input type="text" id="linkedin" class="form-control" placeholder="Enter LinkedIn URL">
-                </div>
-                <div class="input-container">
-                    <label for="github">GitHub</label><br>
-                    <input type="text" id="github" class="form-control" placeholder="Enter GitHub URL">
-                </div>
-                <div class="input-container">
-                    <label for="instagram">Instagram</label><br>
-                    <input type="text" id="instagram" class="form-control" placeholder="Enter Instagram URL">
-                </div>
-            </div>
+        <div class="col-md-6">
+          <h2>Professional Information</h2>
+          <div class="input-container">
+            <label for="job_title">Job Title</label><br />
+            <input
+              type="text"
+              id="job"
+              class="form-control"
+              placeholder="Enter Job Title"
+            />
+          </div>
+          <div class="input-container">
+            <label for="bio">Bio</label><br />
+            <textarea
+              id="bio"
+              class="form-control"
+              rows="6"
+              placeholder="Enter Bio"
+            ></textarea>
+          </div>
+          <h2>Work Experience</h2>
+          <p>Sample</p>
+          <div class="input-container" id="experience_fields_container">
+            <img id="img1" class="img-fluid" src="experience.png" />
+          </div>
+          <div class="container text-center mt-2" id="weAddButton">
+            <button
+              id="addButton2"
+              onclick="addNewField2()"
+              class="btn btn-primary btn-sm"
+            >
+              Add
+            </button>
+          </div>
+          <h2>Links</h2>
+          <div class="input-container">
+            <label for="linkedin">LinkedIn</label><br />
+            <input
+              type="text"
+              id="linkedin"
+              class="form-control"
+              placeholder="Enter LinkedIn URL"
+            />
+          </div>
+          <div class="input-container">
+            <label for="github">GitHub</label><br />
+            <input
+              type="text"
+              id="github"
+              class="form-control"
+              placeholder="Enter GitHub URL"
+            />
+          </div>
+          <div class="input-container">
+            <label for="instagram">Instagram</label><br />
+            <input
+              type="text"
+              id="instagram"
+              class="form-control"
+              placeholder="Enter Instagram URL"
+            />
+          </div>
         </div>
+      </div>
 
-        <div class="text-center mt-4">
-            <button id="generate_resume_btn" class="btn btn-primary" onclick="printResume()">Generate Resume</button>
-        </div>
+      <div class="text-center mt-4">
+        <button
+          id="generate_resume_btn"
+          class="btn btn-primary"
+          onclick="printResume()"
+        >
+          Generate Resume
+        </button>
+      </div>
+      
+    </div><hr style="height:5px;color: rgb(36, 60, 84);">
+
+<div class="container">
+  <div class="row">
+    <div>
+     <br> <h2 style="text-align: center;"><u>Sample Resume</u></h2>
+      <img class="img-fluid" id="img2" src="sample.png">
     </div>
+  </div>
+</div>
+    
 
-    <script src="wscript7.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
